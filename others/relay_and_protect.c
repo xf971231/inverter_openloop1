@@ -19,19 +19,16 @@ void RelayGpioInit(void){
 
     GpioCtrlRegs.GPBDIR.bit.GPIO58 = 1 ; // Output
     GpioCtrlRegs.GPBDIR.bit.GPIO32 = 1 ; // Output
-    GpioCtrlRegs.GPBDIR.bit.GPIO33 = 1 ; // Output
 
 
     GpioCtrlRegs.GPBMUX2.bit.GPIO58 = 0 ; // Common function
     GpioCtrlRegs.GPBMUX1.bit.GPIO32 = 0 ; // Common function
-    GpioCtrlRegs.GPBMUX1.bit.GPIO33 = 0 ; // Common function
 
 
     EDIS ;
 
     PWM_DIS ;
     RELAY_1_OPEN ;
-    RELAY_2_OPEN ;
 
 
     MEASURE_MAX[CH_DC_BUS] = DC_VOLTAGE_MAX ;
@@ -49,13 +46,11 @@ void RelayGpioInit(void){
 
 void Shutdown_PWM_RELAY(void){
     RELAY_1_OPEN ;
-    RELAY_2_OPEN ;
     PWM_DIS ;
 }
 
 void Enable_PWM_RELAY(void){
     PWM_EN ;
-    RELAY_2_CLOSEUP ;
     RELAY_1_CLOSEUP ;
 }
 

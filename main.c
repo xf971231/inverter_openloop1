@@ -53,13 +53,11 @@ int main(void)
             }
             if(flag_PWM == 1)
             {
-                PWM_EN ;
-                RELAY_1_CLOSEUP;
+                Enable_PWM_RELAY();
             }
             else
             {
-                PWM_DIS;
-                RELAY_1_OPEN;
+                Shutdown_PWM_RELAY();
             }
          }
     }
