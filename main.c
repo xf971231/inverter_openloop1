@@ -41,12 +41,12 @@ int main(void)
 //            debug_scope_count ++ ;
 //            debug_scope_count %= 400 ;
 //            debug_scope_1[debug_scope_count] =  frequency_grid_Hz ;
-            if(PWM_RUN)
+            if(KEY_CLOSELOOP_CONTROL_ENABLED)
             {
                 flag_PWM = 1 ;
 
             }
-            if(PWM_STOP)
+            if(KEY_CLOSELOOP_CONTROL_DISABLED)
             {
                 flag_PWM = 0 ;
 

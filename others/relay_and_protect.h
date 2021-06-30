@@ -14,11 +14,15 @@
 
 #include "ltrt.h"
 
-#define PWM_EN {GpioDataRegs.GPBSET.bit.GPIO58=1;}
-#define PWM_DIS  {GpioDataRegs.GPBCLEAR.bit.GPIO58=1;}
+#define PWM_EN {GpioDataRegs.GPBSET.bit.GPIO52=1;}
+#define PWM_DIS  {GpioDataRegs.GPBCLEAR.bit.GPIO52=1;}
 
 #define RELAY_1_OPEN {GpioDataRegs.GPBSET.bit.GPIO32=1;}
+#define RELAY_2_OPEN {GpioDataRegs.GPBSET.bit.GPIO33=1;}
+
+
 #define RELAY_1_CLOSEUP {GpioDataRegs.GPBCLEAR.bit.GPIO32=1;}
+#define RELAY_2_CLOSEUP {GpioDataRegs.GPBCLEAR.bit.GPIO33=1;}
 
 
 void RelayGpioInit(void) ;
