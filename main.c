@@ -1,3 +1,4 @@
+
 /** Inverter main program
  *  From Lab209 Prof. YongQiang Ye
  *  by Donghao@NUAA
@@ -32,9 +33,10 @@ int main(void)
 
     KeyGpioInit();
     RelayGpioInit();
-
+    DAC8554Init();
     for(;;)
     {
+        //StoreVoltage(0, 2 , ADDR_DAC8554, 1);
         if(flag_timer2_updated)
         {
             flag_timer2_updated = 0 ;

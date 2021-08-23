@@ -9,14 +9,20 @@
 
 void KeyGpioInit(void){
     EALLOW ;
-    GpioCtrlRegs.GPADIR.bit.GPIO13 = 0 ; // Set as input ;
-    GpioCtrlRegs.GPAMUX1.bit.GPIO13 = 0 ; // Set as common function
+    GpioCtrlRegs.GPBDIR.bit.GPIO48 = 0 ; // Set as input ;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO48 = 0 ; // Set as common function
 
-    GpioCtrlRegs.GPADIR.bit.GPIO20 = 0 ; // Set as input ;
-    GpioCtrlRegs.GPAMUX2.bit.GPIO20 = 0 ; // Set as common function
+    GpioCtrlRegs.GPBDIR.bit.GPIO49 = 0 ; // Set as input ;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO49 = 0 ; // Set as common function
 
-    GpioCtrlRegs.GPBDIR.bit.GPIO61 = 1 ; // Set as output
-    GpioCtrlRegs.GPBMUX2.bit.GPIO61 = 0 ; // Set as common function
+    GpioCtrlRegs.GPBDIR.bit.GPIO50 = 0 ; // Set as input ;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO50 = 0 ; // Set as common function
+
+    GpioCtrlRegs.GPBDIR.bit.GPIO51 = 0 ; // Set as input ;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO51 = 0 ; // Set as common function
+
+    GpioCtrlRegs.GPADIR.bit.GPIO17 = 1 ; //
+    GpioCtrlRegs.GPAMUX2.bit.GPIO17 = 0 ; // GPIO17作为Scope Trigger位使用
 
     EDIS ;
 //    GpioCtrlRegs.GPADIR.bit.GPIO20 = 1 ;
